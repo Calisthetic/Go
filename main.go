@@ -1,12 +1,13 @@
 package main
 
 import (
+	"net/http"
+	
 	"notice/controllers"
+	"notice/services"
 
 	"github.com/gin-gonic/gin"
 )
-
-
 
 func Api(c *gin.Context) {
 	c.JSON(200, gin.H{
@@ -14,10 +15,18 @@ func Api(c *gin.Context) {
 	})
 }
 
-
-
 func main() {
 	r := gin.Default()
+
+	r.LoadHTMLGlob("./ui/build/index.html")
+	r.Static("/public", "./ui/build")
+
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", gin.H{})
+	})
+
+	r.Use(service.CORS())
+
 	r.GET("/api", Api)
 
 	rApi := r.Group("/api")

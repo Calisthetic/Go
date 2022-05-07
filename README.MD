@@ -4,10 +4,16 @@ go run main.go || go run ...
 go mod download
 go build main.go || go build ...
 
-go get...
-go get github.com/go-pg/pg/v10
-go get github.com/gin-gonic/gin
-go get github.com/gin-gonic/gin/biding@v1.7.7
+npx create-react-app ui
+./project | npm run build
+npm i axios
+npm start
 
+localhost
+go run .
+npm build  x1
+npm start
 
---go mog init notice -|-create project
+plugin postgresSQL
+localhost -> postgres -> ...
+notice -> PKM(New Query) -> copy from "db" -> PKM(run Query)

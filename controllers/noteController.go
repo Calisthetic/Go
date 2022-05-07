@@ -36,7 +36,7 @@ func DelNote(c *gin.Context) {
 }
 
 func AddNote(c *gin.Context) {
-	var note Note
+	var note model.Note
 
 	err := c.BindJSON(&note)
 	if err != nil {
@@ -49,7 +49,7 @@ func AddNote(c *gin.Context) {
 }
 
 func EditNote(c *gin.Context) {
-	var note Note
+	var note model.Note
 
 	err := c.BindJSON(&note)
 	if err != nil {
