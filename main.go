@@ -2,7 +2,7 @@ package main
 
 import (
 	"net/http"
-	
+
 	"notice/controllers"
 	"notice/services"
 
@@ -18,7 +18,7 @@ func Api(c *gin.Context) {
 func main() {
 	r := gin.Default()
 
-	r.LoadHTMLGlob("./ui/build/index.html")
+	r.LoadHTMLGlob("./ui/build/index.html");
 	r.Static("/public", "./ui/build")
 
 	r.GET("/", func(c *gin.Context) {
