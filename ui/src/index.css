@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
-  background-color: darkred;
+  background-image: url(photo2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 code {
@@ -18,10 +20,16 @@ code {
 header {
   width: 100%;
   height: 50px;
-  background-color: #ab0000;
+  background-color: #ffffff;
   z-index: 999;
   position: fixed;
-  box-shadow: 0px 0px 2px 0px black;
+  box-shadow: 0px 0px 2px 0px rgb(170, 170, 170);
+}
+
+label {color: white;}
+
+button:hover {
+  cursor: pointer;
 }
 
 .Container {
@@ -30,25 +38,82 @@ header {
 }
 
 .Main {
-  padding-top: 50px;
+  padding: 60px 10px 10px 10px;
   display: flex;
   justify-content: center;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4)
+}
+
+.Add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Add button {
+  width: 100px;
 }
 
 .Notes {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
-  transform: rotate(180deg);
+  justify-content: start;
+  margin-top: 30px;
 }
 
 .Note_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 5px;
   border: 3px ridge black;
-  padding: 4px;
-  height: 100px;
-  width: 80px;
+  padding: 4px 10px;
+  height: auto;
+  width: 994px;
   margin: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
+
+.Edit_button {
+  background-color: rgb(219, 186, 0);
+  border-radius: 5px;
+  border: 2px solid black;
+  transition: 0.4s;
+  height: 32px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.Edit_button:hover {
+  background-color: gold;
+}
+
+.Delete_button {
+  background-color: #c00;
+  border-radius: 5px;
+  border: 2px solid black;
+  transition: 0.4s;
+  height: 32px;
+  font-size: 16px;  
+}
+.Delete_button:hover {
+  background-color: #f00;
+}
+
+.Block_text {
+  display: flex;
+  flex-direction: row;
+}
+.Block_title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.Block_info {
+  margin-top: 4px;
+}
+
+
+
+
